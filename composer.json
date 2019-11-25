@@ -1,0 +1,35 @@
+{
+    "name": "freshp/example-test-php-core-methods",
+    "description": "this package contains an example to test php core methods",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "FreshP\\ExampleTestPhpCoreMethods\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FreshP\\ExampleTestPhpCoreMethods\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "tm/tooly-composer-script": "^1.4"
+    },
+    "scripts": {
+        "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
+        "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+    },
+    "extra": {
+        "tools": {
+            "phpunit": {
+                "url": "https://phar.phpunit.de/phpunit-8.4.3.phar",
+                "sign-url": "https://phar.phpunit.de/phpunit-8.4.3.phar.asc",
+                "force-replace": true
+            }
+        }
+    }
+}
