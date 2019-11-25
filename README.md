@@ -8,6 +8,11 @@ This package contains an example to test php core methods.
 * many solutions using I found use override_function or other magic methods where you manipulate the method at all
    * this dont work, if you need to return different responses on different calls
    * there is nothing wrong with the other ways I found, but they dont fit to my usecase
+ * advantages:
+    * you can test every path in your code
+    * you can produce every situation without creating complex environments
+    * you have the full handle above every built-in method
+    * no need to change production code
  
 ## how
 * you can [override built-in functions](https://www.php.net/manual/en/language.namespaces.fallback.php) in your current namespace
